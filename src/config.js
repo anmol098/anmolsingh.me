@@ -10,7 +10,7 @@ module.exports = {
   googleVerification: 'zWJzGMVk8J4FpXsLNpt7CB17SPaa2_ti9YfdGwnGr00',
   name: 'Anmol Pratap Singh',
   location: 'Banglore, India',
-  email: 'anmolpratapsingh1997@gmail.com',
+  email: 'hi@anmolsingh.me',
   github: 'https://github.com/anmol098',
   twitterHandle: '@misteranmol',
   socialMedia: [
