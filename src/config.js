@@ -7,7 +7,7 @@ module.exports = {
   siteUrl: 'https://anmolsingh.me',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-45666519-2',
-  googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
+  googleVerification: 'zWJzGMVk8J4FpXsLNpt7CB17SPaa2_ti9YfdGwnGr00',
   name: 'Anmol Pratap Singh',
   location: 'Banglore, India',
   email: 'anmolpratapsingh1997@gmail.com',
