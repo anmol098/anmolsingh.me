@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedIcon } from '@components/icons';
-import { socialMedia } from '@config';
+import { socialMedia, lastUpdated } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
+
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled.footer`
@@ -77,17 +78,17 @@ const Footer = () => {
       <StyledSocial>
         <StyledSocialList>
           {socialMedia &&
-            socialMedia.map(({ name, url }, i) => (
-              <li key={i}>
-                <StyledSocialLink
-                  href={url}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  aria-label={name}>
-                  <FormattedIcon name={name} />
-                </StyledSocialLink>
-              </li>
-            ))}
+          socialMedia.map(({ name, url }, i) => (
+            <li key={i}>
+              <StyledSocialLink
+                href={url}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                aria-label={name}>
+                <FormattedIcon name={name}/>
+              </StyledSocialLink>
+            </li>
+          ))}
         </StyledSocialList>
       </StyledSocial>
       <StyledMetadata tabindex="-1">
@@ -95,14 +96,19 @@ const Footer = () => {
           href="https://github.com/bchiang7/v4"
           target="_blank"
           rel="nofollow noopener noreferrer">
-          <div>Designed &amp; Built by Brittany Chiang</div>
+          <div>Designed &amp; Built by Brittany Chiang |</div>
         </StyledGitHubLink>
         <StyledGitHubLink
           href="https://github.com/anmol098"
           target="_blank"
           rel="nofollow noopener noreferrer">
-          <div>||  Customized By Anmol Pratap Singh</div>
+          <div>| Customized By Anmol Pratap Singh</div>
         </StyledGitHubLink>
+        <StyledGitHubInfo>
+          <span>
+            <span>Last Updated on: {lastUpdated}</span>
+          </span>
+        </StyledGitHubInfo>
       </StyledMetadata>
     </StyledContainer>
   );

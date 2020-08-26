@@ -17,11 +17,12 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby build & gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "updateDate": "node .\\pre-push-script.js"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "updateDate"
     }
   },
   "lint-staged": {
@@ -74,6 +75,9 @@
     "gatsby-remark-code-titles": "^1.1.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.2",
-    "prettier": "^2.0.4"
+    "moment": "^2.27.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.0.4",
+    "replace-in-file": "^6.1.0"
   }
 }
