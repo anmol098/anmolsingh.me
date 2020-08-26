@@ -35,7 +35,7 @@ module.exports = {
       url: 'https://twitter.com/misteranmol',
     },
   ],
-  lastUpdated: '25-Aug-2020',
+  lastUpdated: '24-Aug-2020',
 
   navLinks: [
     {

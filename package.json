@@ -20,9 +20,12 @@
     "clean": "gatsby clean",
     "updateDate": "node .\\pre-push-script.js"
   },
+  "pre-commit": [
+    "updateDate"
+  ],
   "husky": {
     "hooks": {
-      "pre-commit": "updateDate"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
