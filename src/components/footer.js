@@ -92,18 +92,18 @@ const Footer = () => {
         </StyledSocialList>
       </StyledSocial>
       <StyledMetadata tabindex="-1">
-        {/*<StyledGitHubLink*/}
-        {/*  href="https://github.com/bchiang7/v4"*/}
-        {/*  target="_blank"*/}
-        {/*  rel="nofollow noopener noreferrer">*/}
-        {/*  <div>Designed &amp; Built by Brittany Chiang |</div>*/}
-        {/*</StyledGitHubLink>*/}
-        {/*<StyledGitHubLink*/}
-        {/*  href="https://github.com/anmol098"*/}
-        {/*  target="_blank"*/}
-        {/*  rel="nofollow noopener noreferrer">*/}
-        {/*  <div>| Customized By Anmol Pratap Singh</div>*/}
-        {/*</StyledGitHubLink>*/}
+        <StyledGitHubLink
+          href="https://github.com/bchiang7/v4"
+          target="_blank"
+          rel="nofollow noopener noreferrer">
+          <div>| Designed &amp; Built by Brittany Chiang |</div>
+        </StyledGitHubLink>
+        <StyledGitHubLink
+          href="https://github.com/anmol098"
+          target="_blank"
+          rel="nofollow noopener noreferrer">
+          <div>| Customized By Anmol Pratap Singh |</div>
+        </StyledGitHubLink>
         <StyledGitHubInfo>
           <span>
             <span>Last Updated on: {lastUpdated}</span>
