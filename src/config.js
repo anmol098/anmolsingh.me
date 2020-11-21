@@ -6,7 +6,7 @@ module.exports = {
     'Anmol Singh, Anmol, singh, anmol098, software engineer, back-end engineer, web developer, javascript, indian',
   siteUrl: 'https://anmolsingh.me',
   siteLanguage: 'en_US',
-  googleAnalyticsID: '',
+  googleAnalyticsID: 'UA-45666519-2',
   googleVerification: 'zWJzGMVk8J4FpXsLNpt7CB17SPaa2_ti9YfdGwnGr00',
   name: 'Anmol Pratap Singh',
   location: 'Banglore, India',
