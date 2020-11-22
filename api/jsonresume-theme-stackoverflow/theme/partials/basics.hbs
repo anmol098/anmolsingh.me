@@ -1,0 +1,90 @@
+{{#resume.basics}}
+	<header id="header" class="clear">
+		{{#if image}}
+		<img class="image" src="{{image}}" alt="{{name}}" />
+		<div class="middle">
+			<h1 class="name">{{name}}</h1>
+			<h2 class="label">{{label}}</h2>
+		</div>
+		{{else}}
+		<div>
+			<h1 class="name">{{name}}</h1>
+			<h2 class="label">{{label}}</h2>
+		</div>
+		{{/if}}
+
+		{{#location}}
+		<span class="location">
+			{{#if address}}
+			<span class="address">{{address}},</span>
+			{{/if}}
+			{{#if postalCode}}
+			<span class="postalCode">{{postalCode}},</span>
+			{{/if}}
+			{{#if city}}
+			<span class="city">{{city}},</span>
+			{{/if}}
+			{{#if region}}
+			<span class="region">{{region}}</span>
+			{{/if}}
+			{{#if countryCode}}
+			<span class="countryCode">{{countryCode}}</span>
+			{{/if}}
+		</span>
+		{{/location}}
+
+		{{#birthDate birth}}
+		{{/birthDate}}
+
+		<div id="contact">
+			{{#if website}}
+			<div class="website">
+				<span class="fas fa-external-link-alt"></span>
+				<a target="_blank" target="_blank" href="{{website}}">{{website}}</a>
+			</div>
+			{{/if}}
+			{{#if email}}
+			<div class="email">
+				<span class="far fa-envelope"></span>
+				<a href="mailto:{{email}}">{{email}}</a>
+			</div>
+			{{/if}}
+			{{#if phone}}
+			<div class="phone">
+				<span class="fas fa-mobile-alt"></span>
+				<a href="tel:{{phone}}">{{phone}}</a>
+			</div>
+			{{/if}}
+		</div>
+
+		{{#if profiles.length}}
+		<div id="profiles">
+			{{#each profiles}}
+			<div class="item">
+				{{#if network}}
+				<div class="username">
+					<span class="fab fa-{{spaceToDash network}} {{spaceToDash network}} social"></span>
+					{{#if url}}
+					<span class="url">
+						<a target="_blank" href="{{url}}">{{username}}</a>
+					</span>
+					{{else}}
+					<span>{{username}}</span>
+					{{/if}}
+				</div>
+				{{/if}}
+			</div>
+			{{/each}}
+		</div>
+		{{/if}}
+	</header>
+
+	{{#if summary}}
+	<section class="section">
+		<section class="main-summary">
+			<div>{{paragraphSplit summary}}</div>
+		</section>
+	</section>
+	{{/if}}
+
+{{/resume.basics}}

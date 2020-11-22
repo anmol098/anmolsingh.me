@@ -1,0 +1,91 @@
+{{#if resume.education.length}}
+<section class="section">
+  <header>
+    <h2 class='section-title'>Education <span class="item-count">({{resume.education.length}})</span></h2>
+  </header>
+
+  <section id="education">
+    {{#each resume.education}}
+    <section class="education-item">
+      {{#if summary}}
+        {{#if @first}}
+        <input id="education-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
+        {{else}}
+        <input id="education-item-{{@index}}" type="checkbox" class="toggle-item" />
+        {{/if}}
+        <label for="education-item-{{@index}}"></label>
+      {{/if}}
+      <header class="clear">
+        <div class="header-left">
+          {{#if studyType}}
+          <div class="studyType">
+            {{studyType}}
+          </div>
+          {{/if}}
+          {{#if area}}
+          <div class="area">
+            {{area}}
+          </div>
+          {{/if}}
+          {{#if institution}}
+          <div class="institution">
+            {{institution}}
+          </div>
+          {{/if}}
+        </div>
+        <div class="date">
+          {{#if startDate}}
+          <span class="startDate">
+          {{Y startDate}}
+          </span>
+          {{/if}}
+          {{#if endDate}}
+          <span class="endDate">
+          - {{Y endDate}}
+          </span>
+          {{else}}
+          <span class="endDate">
+          - Current
+          </span>
+          {{/if}}
+        </div>
+      </header>
+
+      {{#location}}
+      <span class="location">
+        <span class="fas fa-map-marker-alt"></span>
+        {{#if city}}
+        <span class="city">{{city}}, </span>
+        {{/if}}
+        {{#if countryCode}}
+        <span class="countryCode">({{countryCode}})</span>
+        {{/if}}
+        {{#if region}}
+        <span class="region">{{region}}</span>
+        {{/if}}
+      </span>
+      {{/location}}
+
+      {{#if courses.length}}
+      <ul class="courses">
+        {{#each courses}}
+        <li>{{.}}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+
+      <div class="item">
+        {{#if gpa}}
+        <div class='gpa'>
+          <strong> Grade:</strong> <span>{{gpa}}</span>
+        </div>
+        {{/if}}
+        {{#if summary}}
+          <div class="summary">{{paragraphSplit summary}}</div>
+        {{/if}}
+      </div>
+    </section>
+    {{/each}}
+  </section>
+</section>
+{{/if}}

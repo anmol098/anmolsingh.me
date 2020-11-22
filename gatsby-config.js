@@ -13,18 +13,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'AnmolSingh',
-        short_name: 'AnmolSingh',
-        start_url: '/',
-        background_color: config.colors.darkNavy,
-        theme_color: config.colors.navy,
-        display: 'minimal-ui',
-        icon: 'src/images/logo.png',
-      },
-    },
     `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-source-filesystem',
@@ -57,6 +45,16 @@ module.exports = {
             options: {
               target: '_blank',
               rel: 'nofollow noopener noreferrer',
+            },
+          },
+          {
+            // https://www.gatsbyjs.org/packages/gatsby-remark-images
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 700,
+              linkImagesToOriginal: true,
+              quality: 90,
+              tracedSVG: true,
             },
           },
           {

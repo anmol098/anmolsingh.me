@@ -8,7 +8,7 @@
     "url": "https://github.com/anmol098/anmolsingh.me"
   },
   "engines": {
-    "node": "12.0.0"
+    "node": "12.x"
   },
   "keywords": [
     "gatsby"
@@ -51,7 +51,7 @@
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sharp": "^2.3.5",
+    "gatsby-plugin-sharp": "^2.9.0",
     "gatsby-plugin-sitemap": "^2.2.22",
     "gatsby-plugin-styled-components": "^3.1.14",
     "gatsby-remark-external-links": "0.0.4",
@@ -60,6 +60,7 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.7",
+    "gisty": "^0.1.5",
     "lodash": "^4.17.15",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
@@ -69,7 +70,9 @@
     "react-transition-group": "^4.3.0",
     "scrollreveal": "^4.0.5",
     "smooth-scroll": "^16.1.0",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "handlebars": "^4.3.0",
+    "moment": "^2.19.3"
   },
   "devDependencies": {
     "@upstatement/eslint-config": "0.4.3",

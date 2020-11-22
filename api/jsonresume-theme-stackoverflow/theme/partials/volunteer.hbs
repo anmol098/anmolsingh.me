@@ -1,0 +1,97 @@
+{{#if resume.volunteer.length}}
+<section class="section">
+  <header>
+    <h2 class='section-title'>Volunteer</h2>
+  </header>
+  <section id="volunteer">
+    {{#each resume.volunteer}}
+    <section class="volunteer-item">
+      {{#if organization}}
+
+      {{#if summary}}
+        {{#if @first}}
+        <input id="volunteer-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
+        {{else}}
+        <input id="volunteer-item-{{@index}}" type="checkbox" class="toggle-item" />
+        {{/if}}
+        <label for="volunteer-item-{{@index}}"></label>
+      {{/if}}    
+
+      <header class="clear">
+        <div class="header-left">
+          {{#if position}}
+          <div class="position">
+            {{position}}
+          </div>
+          {{/if}}
+          <div class="organization">
+            {{organization}}
+          </div>
+        </div>
+        <div class="date">
+          {{#if startDate}}
+          <span class="startDate">
+          {{MY startDate}}
+          </span>
+          {{/if}}
+          {{#if endDate}}
+          <span class="endDate">
+          - {{MY endDate}}
+          </span>
+          {{else}}
+          <span class="endDate">
+          - Current
+          </span>
+          {{/if}}
+        </div>
+      </header>
+      {{/if}}
+      {{#if website}}
+      <div class="website">
+        <a target="_blank" href="{{website}}">{{website}}</a>
+      </div>
+      {{/if}}
+      {{#location}}
+      <span class="location">
+      <span class="fas fa-map-marker-alt"></span>
+      {{#if city}}
+      <span class="city">
+      {{city}},
+      </span>
+      {{/if}}
+      {{#if countryCode}}
+      <span class="countryCode">
+      ({{countryCode}})
+      </span>
+      {{/if}}
+      {{#if region}}
+      <span class="region">
+      {{region}}
+      </span>
+      {{/if}}
+      </span>
+      {{/location}}
+      {{#if keywords.length}}
+      <ul class="keywords">
+        {{#each keywords}}
+        <li>{{.}}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+      <div class="item">
+        {{#if summary}}
+          <div class="summary">{{paragraphSplit summary}}</div>
+        {{/if}}
+        {{#if highlights.length}}
+        <ul class="highlights">
+          {{#each highlights}}
+          <li>{{paragraphSplit .}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+    </section>
+    {{/each}}
+  </section>
+</section>
+{{/if}}
