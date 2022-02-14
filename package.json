@@ -8,14 +8,14 @@
     "url": "https://github.com/anmol098/anmolsingh.me"
   },
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
