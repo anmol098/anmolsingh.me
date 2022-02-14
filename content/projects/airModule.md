@@ -7,7 +7,7 @@ tech:
   - Pdf-Parser
   - NodeJs
 company: 'ClearTax'
-showInProjects: true
+showInProjects: false
 ---
 
 In-house airline module for claiming input tax credits on flight tickets and helping company to save up to ₹10 LPA on recurring basis.

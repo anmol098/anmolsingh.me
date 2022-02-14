@@ -8,7 +8,7 @@ tech:
   - NetSuite ERP
   - XML
 company: 'ClearTax'
-showInProjects: true
+showInProjects: false
 ---
 
 Developed NetSuite Connector For ClearTax in this all the Invoice level ERP data is sent to ClearTax for easy filing of the GST returns
