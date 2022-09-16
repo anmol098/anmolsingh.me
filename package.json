@@ -21,10 +21,10 @@
     "start": "npm run develop",
     "serve": "gatsby build & gatsby serve",
     "clean": "gatsby clean",
-    "updateDate": "node ./pre-push-script.js"
+    "updateDate": "node ./pre-push-script.js && git commit -am 'Date Updated'"
   },
   "pre-commit": [
-    "updateDate"
+    
   ],
   "husky": {
     "hooks": {
