@@ -3,7 +3,7 @@ date: '2022-01-01'
 title: 'Lead Software Engineer'
 company: 'Footloose Labs'
 location: 'Banglore, India'
-range: 'January 2022 - Present'
+range: 'January 2022 - November 2022'
 url: 'https://www.footloose.io/'
 ---
 
