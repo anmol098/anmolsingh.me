@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/anmol098/anmolsingh.me"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "keywords": [
     "gatsby"
   ],
