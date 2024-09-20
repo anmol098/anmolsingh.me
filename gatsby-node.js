@@ -44,13 +44,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Create post detail pages
   const posts = result.data.postsRemark.edges;
 
-  posts.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.slug,
-      component: postTemplate,
-      context: {},
-    });
-  });
+  // posts.forEach(({ node }) => {
+  //   createPage({
+  //     path: node.frontmatter.slug,
+  //     component: postTemplate,
+  //     context: {},
+  //   });
+  // });
 
   // Extract tag data from query
   const tags = result.data.tagsGroup.group;

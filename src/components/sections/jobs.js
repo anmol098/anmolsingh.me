@@ -154,6 +154,26 @@ const StyledJobDetails = styled.h5`
   }
 `;
 
+const StyledJobLocation = styled.h4`
+  font-family: ${fonts.SFMono};
+  font-size: ${fontSizes.smish};
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: ${colors.lightSlate};
+  margin-bottom: 16px;
+  svg {
+    width: 15px;
+  }
+`;
+
+const StyledCompanyTabItem = styled.span`
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  width:150px;
+  display:inline-block;
+`;
+
 const Jobs = ({ data }) => {
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
@@ -212,7 +232,7 @@ const Jobs = ({ data }) => {
                     aria-selected={activeTabId === i ? true : false}
                     aria-controls={`panel-${i}`}
                     tabIndex={activeTabId === i ? '0' : '-1'}>
-                    <span>{company}</span>
+                    <StyledCompanyTabItem>{company}</StyledCompanyTabItem>
                   </StyledTabButton>
                 </li>
               );
@@ -223,7 +243,7 @@ const Jobs = ({ data }) => {
         {data &&
           data.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { title, url, company, range } = frontmatter;
+            const { title, url, company, range, location } = frontmatter;
             return (
               <StyledTabContent
                 key={i}
@@ -242,6 +262,9 @@ const Jobs = ({ data }) => {
                     </a>
                   </StyledCompany>
                 </StyledJobTitle>
+                <StyledJobLocation>
+                  <span>{location}</span>
+                </StyledJobLocation>
                 <StyledJobDetails>
                   <span>{range}</span>
                 </StyledJobDetails>
