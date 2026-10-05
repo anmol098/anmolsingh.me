@@ -1,69 +1,34 @@
 {{#if resume.projects.length}}
 <section class="section">
-  <header>
-    <h2 class='section-title'>Projects <span class="item-count">({{resume.projects.length}})</span></h2>
-  </header>
-  <section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div id="projects">
     {{#each resume.projects}}
-    <section class="project-item">
-      {{#if summary}}
-        {{#if @first}}
-        <input id="project-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
-        {{else}}
-        <input id="project-item-{{@index}}" type="checkbox" class="toggle-item" />
-        {{/if}}
-        <label for="project-item-{{@index}}"></label>
-      {{/if}}
-
-      {{#if name}}
-      <header class="clear">
-        {{#if name}}
-        <div class="position">{{name}}</div>
-        {{/if}}
-        {{#if startDate}}
-        <div class="date">
-          <span class="startDate">{{MY startDate}}</span>
-          {{#if endDate}}
-          <span class="endDate">- {{MY endDate}}</span>
-          {{else}}
-          <span class="endDate">- Current</span>
-          {{/if}}
+    <article class="entry">
+      <header class="entry-head">
+        <div class="entry-title">
+          <span class="position">{{name}}</span>
+          {{#if entity}}<span class="company">{{entity}}</span>{{/if}}
         </div>
+        {{#if startDate}}
+        <div class="date">{{MY startDate}}{{#if endDate}} – {{MY endDate}}{{/if}}</div>
         {{/if}}
       </header>
-      {{/if}}
-      {{#if entity}}
-      <span class="location">
-        <span class="fas fa-map-marker-alt"></span>
-        <span class="city">{{entity}}</span>
-      </span>
-      {{/if}}
       {{#if url}}
-      <span class="website">
-        <a target="_blank" href="{{url}}">{{url}}</a>
-      </span>
+      <div class="meta"><a target="_blank" rel="noopener" href="{{url}}">{{url}}</a></div>
+      {{/if}}
+      {{#if summary}}<div class="summary">{{paragraphSplit summary}}</div>{{/if}}
+      {{#if highlights.length}}
+      <ul class="highlights">
+        {{#each highlights}}<li>{{paragraphSplit .}}</li>{{/each}}
+      </ul>
       {{/if}}
       {{#if keywords.length}}
       <ul class="keywords">
-        {{#each keywords}}
-          <li>{{.}}</li>
-        {{/each}}
+        {{#each keywords}}<li>{{.}}</li>{{/each}}
       </ul>
       {{/if}}
-      <div class="item">
-        {{#if summary}}
-          <div class="summary">{{paragraphSplit summary}}</div>
-        {{/if}}
-        {{#if highlights.length}}
-        <ul class="highlights">
-          {{#each highlights}}
-            <li>{{paragraphSplit .}}</li>
-          {{/each}}
-        </ul>
-        {{/if}}
-      </div>
-    </section>
+    </article>
     {{/each}}
-  </section>
+  </div>
 </section>
 {{/if}}
