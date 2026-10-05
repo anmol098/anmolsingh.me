@@ -1,14 +1,16 @@
-const chromium = require('@sparticuz/chromium');
-const puppeteer = require('puppeteer-core');
 const { renderResume } = require('./_renderResume');
 
 // Set CHROME_PATH to use a locally installed Chrome (e.g. when testing outside Vercel).
-const launchBrowser = async () =>
-  puppeteer.launch({
-    args: chromium.args,
+const launchBrowser = async () => {
+  // Both packages are ESM-first, so load them with dynamic import.
+  const chromium = (await import('@sparticuz/chromium')).default;
+  const puppeteer = (await import('puppeteer-core')).default;
+  return puppeteer.launch({
+    args: await puppeteer.defaultArgs({ args: chromium.args, headless: 'shell' }),
     executablePath: process.env.CHROME_PATH || (await chromium.executablePath()),
-    headless: true,
+    headless: 'shell',
   });
+};
 
 export default async (req, res) => {
   let browser;
@@ -28,6 +30,7 @@ export default async (req, res) => {
     res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
     res.status(200).send(Buffer.from(pdf));
   } catch (error) {
+    console.error('resume-pdf failed:', error);
     res.status(500).send('Unable to generate resume PDF');
   } finally {
     if (browser) {
