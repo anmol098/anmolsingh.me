@@ -319,8 +319,34 @@ body {
     font-size: 12px;
   }
 
-  #resume .entry {
+  #resume .section-title,
+  #resume .entry-head {
+    break-after: avoid;
+  }
+
+  #resume .entry,
+  #resume .skill-row,
+  #resume .highlights li,
+  #resume .lang {
     break-inside: avoid;
+  }
+
+  #resume .highlights li,
+  #resume .summary p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  #resume .section {
+    margin-top: 28px;
+  }
+
+  #resume .skill-row {
+    padding: 6px 0;
+  }
+
+  #resume .entry {
+    padding-bottom: 18px;
   }
 
   #resume .about:not([open]) {
