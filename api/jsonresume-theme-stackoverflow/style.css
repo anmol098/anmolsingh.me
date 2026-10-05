@@ -363,3 +363,187 @@ body {
     print-color-adjust: exact;
   }
 }
+
+/* Colourful on-screen theme.
+   Screen only: the PDF is rendered with print media, so none of this applies there. */
+
+@media screen {
+  :root {
+    --c-teal: #0f766e;
+    --c-indigo: #4f46e5;
+    --c-violet: #7c3aed;
+    --c-amber: #d97706;
+    --c-rose: #e11d48;
+    --c-page-a: #ecfeff;
+    --c-page-b: #eef2ff;
+  }
+
+  html,
+  body {
+    background: linear-gradient(160deg, var(--c-page-a) 0%, var(--c-page-b) 100%) fixed;
+  }
+
+  #resume {
+    overflow: hidden;
+    border-color: #e0e7ff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.12), 0 2px 6px rgba(15, 118, 110, 0.08);
+  }
+
+  /* Header: gradient banner bleeding to the sheet edges */
+  #resume #header {
+    margin: -56px -60px 0;
+    padding: 40px 60px 32px;
+    background: linear-gradient(120deg, var(--c-teal) 0%, #0e7490 45%, var(--c-indigo) 100%);
+    color: #ffffff;
+  }
+
+  #resume #header .name {
+    color: #ffffff;
+  }
+
+  #resume #header .label {
+    color: #a5f3fc;
+    letter-spacing: 0.01em;
+  }
+
+  #resume #contact {
+    color: #e0f2fe;
+  }
+
+  #resume #contact a:hover {
+    color: #ffffff;
+  }
+
+  #resume #contact .icon {
+    color: #67e8f9;
+  }
+
+  #resume #header + .section {
+    margin-top: 32px;
+  }
+
+  /* Section titles: coloured label with a gradient rule, accent changes per section */
+  #resume .section {
+    --accent: var(--c-teal);
+  }
+
+  #resume .section:has(> #skills) {
+    --accent: var(--c-indigo);
+  }
+
+  #resume .section:has(> #work) {
+    --accent: var(--c-teal);
+  }
+
+  #resume .section:has(> #projects) {
+    --accent: var(--c-violet);
+  }
+
+  #resume .section:has(> #education) {
+    --accent: var(--c-amber);
+  }
+
+  #resume .section:has(> #languages) {
+    --accent: var(--c-rose);
+  }
+
+  #resume .section-title {
+    position: relative;
+    padding-left: 14px;
+    border-bottom: 0;
+    color: var(--accent);
+  }
+
+  #resume .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    bottom: 6px;
+    width: 4px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+
+  #resume .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent 70%);
+    opacity: 0.55;
+  }
+
+  /* Skills */
+  #resume .skill-row .name {
+    color: var(--accent);
+  }
+
+  /* Entries: coloured rail, tinted date pill, accent company and marker */
+  #resume .entry {
+    padding-left: 16px;
+    border-left: 2px solid color-mix(in srgb, var(--accent) 25%, #ffffff);
+    margin-bottom: 4px;
+  }
+
+  #resume .entry:hover {
+    border-left-color: var(--accent);
+  }
+
+  #resume .position {
+    color: var(--c-strong, #111827);
+  }
+
+  #resume .company {
+    color: var(--accent);
+  }
+
+  #resume .company::before {
+    color: color-mix(in srgb, var(--accent) 45%, #ffffff);
+  }
+
+  #resume .date {
+    padding: 1px 10px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 10%, #ffffff);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  #resume .entry .icon {
+    color: var(--accent);
+  }
+
+  #resume .highlights li::marker {
+    color: var(--accent);
+  }
+
+  #resume .tech-label {
+    color: var(--accent);
+  }
+
+  #resume .lang .language {
+    color: var(--accent);
+  }
+
+  #resume .entry a:hover,
+  #resume .section a:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 700px) {
+    #resume {
+      border-radius: 0;
+    }
+
+    #resume #header {
+      margin: -28px -18px 0;
+      padding: 28px 18px 24px;
+    }
+  }
+}
