@@ -15,7 +15,7 @@ const launchBrowser = async () => {
 export default async (req, res) => {
   let browser;
   try {
-    const html = await renderResume();
+    const html = await renderResume({ pdf: true });
     browser = await launchBrowser();
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
