@@ -1,5 +1,5 @@
 ---
-title: 'Let's Build Something With AI'
+title: "Let's Build Something With AI"
 buttonText: 'npx anmol'
 ---
 
