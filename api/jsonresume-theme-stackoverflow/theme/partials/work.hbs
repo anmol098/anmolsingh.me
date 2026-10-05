@@ -1,30 +1,23 @@
 {{#if resume.work.length}}
 <section class="section">
-  <h2 class="section-title">Experience</h2>
+  <h2 class="section-title">Work Experience</h2>
   <div id="work">
     {{#each resume.work}}
     <article class="entry">
       <header class="entry-head">
-        <div class="entry-title">
+        <h3 class="entry-title">
           <span class="position">{{position}}</span>
           <span class="company">{{name}}</span>
-        </div>
+        </h3>
         <div class="date">{{#if startDate}}{{MY startDate}}{{/if}} – {{#if endDate}}{{MY endDate}}{{else}}Present{{/if}}</div>
       </header>
-      <div class="meta">
-        {{#location}}{{#if city}}<span>{{city}}{{#if countryCode}}, {{countryCode}}{{/if}}</span>{{/if}}{{/location}}
-        {{#if website}}<a target="_blank" rel="noopener" href="{{website}}">{{website}}</a>{{/if}}
-      </div>
+      {{#location}}{{#if city}}
+      <div class="meta">{{icon "location"}}<span>{{city}}{{#if countryCode}}, {{countryCode}}{{/if}}</span></div>
+      {{/if}}{{/location}}
       {{#if highlights.length}}
       <ul class="highlights">
-        {{#each highlights}}<li>{{paragraphSplit .}}</li>{{/each}}
+        {{#each highlights}}<li>{{.}}</li>{{/each}}
       </ul>
-      {{/if}}
-      {{#if summary}}
-      <details class="about">
-        <summary>About the company</summary>
-        <div class="summary">{{paragraphSplit summary}}</div>
-      </details>
       {{/if}}
     </article>
     {{/each}}

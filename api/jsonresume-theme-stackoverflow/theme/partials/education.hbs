@@ -5,15 +5,15 @@
     {{#each resume.education}}
     <article class="entry">
       <header class="entry-head">
-        <div class="entry-title">
+        <h3 class="entry-title">
           <span class="position">{{studyType}}{{#if area}}, {{area}}{{/if}}</span>
           <span class="company">{{institution}}</span>
-        </div>
+        </h3>
         <div class="date">{{#if startDate}}{{Y startDate}}{{/if}} – {{#if endDate}}{{Y endDate}}{{else}}Present{{/if}}</div>
       </header>
       {{#if gpa}}<div class="meta"><span>Grade: {{gpa}}</span></div>{{/if}}
       {{#if courses.length}}
-      <ul class="keywords">{{#each courses}}<li>{{.}}</li>{{/each}}</ul>
+      <p class="tech"><span class="tech-label">Courses:</span> {{#each courses}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}</p>
       {{/if}}
       {{#if summary}}<div class="summary">{{paragraphSplit summary}}</div>{{/if}}
     </article>
