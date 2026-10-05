@@ -1,8 +1,8 @@
 ---
 title: 'Hi, my name is'
 name: 'Anmol Singh'
-subtitle: 'I build things on web.'
+subtitle: 'I build AI-powered products end to end.'
 buttonText: 'Get In Touch'
 ---
 
-I'm a software engineer based in Dubai, UAE specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.
+I'm an AI Engineer and Full Stack Developer based in Dubai, UAE. I design and ship scalable, AI-first products, from agentic systems and LLM-powered workflows to the web and mobile apps and cloud infrastructure around them.
