@@ -106,6 +106,10 @@ body {
   word-break: break-word;
 }
 
+#resume .phone-label {
+  color: var(--r-muted);
+}
+
 /* Sections */
 
 #resume .section {

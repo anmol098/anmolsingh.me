@@ -8,7 +8,13 @@
     <li>{{icon "location"}}<span>{{#if address}}{{address}}, {{/if}}{{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}{{#if countryCode}}, {{countryCode}}{{/if}}</span></li>
     {{/location}}
     {{#if email}}<li>{{icon "email"}}<a href="mailto:{{email}}">{{email}}</a></li>{{/if}}
-    {{#if phone}}<li>{{icon "phone"}}<a href="tel:{{phone}}">{{phone}}</a></li>{{/if}}
+    {{#if phones.length}}
+    {{#each phones}}
+    <li>{{icon "phone"}}<a href="tel:{{tel number}}">{{number}}</a>{{#if label}} <span class="phone-label">({{label}})</span>{{/if}}</li>
+    {{/each}}
+    {{else}}
+    {{#if phone}}<li>{{icon "phone"}}<a href="tel:{{tel phone}}">{{phone}}</a></li>{{/if}}
+    {{/if}}
     {{#if website}}<li>{{icon "website"}}<a target="_blank" rel="noopener" href="{{website}}">{{website}}</a></li>{{/if}}
     {{#each profiles}}
     <li>{{icon network}}{{#if url}}<a target="_blank" rel="noopener" href="{{url}}">{{url}}</a>{{else}}<span>{{network}}: {{username}}</span>{{/if}}</li>
