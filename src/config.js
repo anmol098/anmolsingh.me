@@ -1,15 +1,15 @@
 module.exports = {
-  siteTitle: 'Anmol Pratap Singh | Software Engineer',
+  siteTitle: 'Anmol Pratap Singh | AI Engineer & Full Stack Developer',
   siteDescription:
-    'Anmol Singh is a software engineer based in Banglore, India who specializes in building (and occasionally designing) exceptional websites, applications, and everything in between.',
+    'Anmol Singh is an AI engineer and full stack developer based in Dubai, UAE who builds scalable AI-first products, agentic systems, and SaaS platforms.',
   siteKeywords:
-    'Anmol Singh, Anmol, singh, anmol098, software engineer, back-end engineer, web developer, javascript, indian',
+    'Anmol Singh, Anmol, singh, anmol098, AI engineer, full stack developer, generative AI, agentic systems, LLM, software engineer, web developer, typescript, python',
   siteUrl: 'https://anmolsingh.me',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-127188467-2',
   googleVerification: 'zWJzGMVk8J4FpXsLNpt7CB17SPaa2_ti9YfdGwnGr00',
   name: 'Anmol Pratap Singh',
-  location: 'Banglore, India',
+  location: 'Dubai, UAE',
   email: 'hi@anmolsingh.me',
   github: 'https://github.com/anmol098',
   twitterHandle: '@misteranmol',
