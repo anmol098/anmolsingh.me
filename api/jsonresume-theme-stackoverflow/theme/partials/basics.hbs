@@ -1,23 +1,24 @@
 {{#resume.basics}}
 <header id="header">
   <h1 class="name">{{name}}</h1>
-  {{#if label}}<h2 class="label">{{label}}</h2>{{/if}}
+  {{#if label}}<p class="label">{{label}}</p>{{/if}}
 
-  <div id="contact">
+  <ul id="contact">
     {{#location}}
-    <span class="location">{{#if address}}{{address}}, {{/if}}{{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}{{#if countryCode}}, {{countryCode}}{{/if}}</span>
+    <li>{{icon "location"}}<span>{{#if address}}{{address}}, {{/if}}{{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}{{#if countryCode}}, {{countryCode}}{{/if}}</span></li>
     {{/location}}
-    {{#if email}}<a href="mailto:{{email}}">{{email}}</a>{{/if}}
-    {{#if phone}}<a href="tel:{{phone}}">{{phone}}</a>{{/if}}
-    {{#if website}}<a target="_blank" rel="noopener" href="{{website}}">{{website}}</a>{{/if}}
+    {{#if email}}<li>{{icon "email"}}<a href="mailto:{{email}}">{{email}}</a></li>{{/if}}
+    {{#if phone}}<li>{{icon "phone"}}<a href="tel:{{phone}}">{{phone}}</a></li>{{/if}}
+    {{#if website}}<li>{{icon "website"}}<a target="_blank" rel="noopener" href="{{website}}">{{website}}</a></li>{{/if}}
     {{#each profiles}}
-      {{#if url}}<a target="_blank" rel="noopener" href="{{url}}">{{network}}</a>{{else}}<span>{{network}}: {{username}}</span>{{/if}}
+    <li>{{icon network}}{{#if url}}<a target="_blank" rel="noopener" href="{{url}}">{{url}}</a>{{else}}<span>{{network}}: {{username}}</span>{{/if}}</li>
     {{/each}}
-  </div>
+  </ul>
 </header>
 
 {{#if summary}}
 <section class="section">
+  <h2 class="section-title">Summary</h2>
   <div class="main-summary">{{paragraphSplit summary}}</div>
 </section>
 {{/if}}

@@ -5,27 +5,25 @@
     {{#each resume.projects}}
     <article class="entry">
       <header class="entry-head">
-        <div class="entry-title">
+        <h3 class="entry-title">
           <span class="position">{{name}}</span>
           {{#if entity}}<span class="company">{{entity}}</span>{{/if}}
-        </div>
+        </h3>
         {{#if startDate}}
-        <div class="date">{{MY startDate}}{{#if endDate}} – {{MY endDate}}{{/if}}</div>
+        <div class="date">{{MY startDate}}{{#if endDate}} – {{MY endDate}}{{else}} – Present{{/if}}</div>
         {{/if}}
       </header>
       {{#if url}}
-      <div class="meta"><a target="_blank" rel="noopener" href="{{url}}">{{url}}</a></div>
+      <div class="meta">{{icon "link"}}<a target="_blank" rel="noopener" href="{{url}}">{{url}}</a></div>
       {{/if}}
       {{#if summary}}<div class="summary">{{paragraphSplit summary}}</div>{{/if}}
       {{#if highlights.length}}
       <ul class="highlights">
-        {{#each highlights}}<li>{{paragraphSplit .}}</li>{{/each}}
+        {{#each highlights}}<li>{{.}}</li>{{/each}}
       </ul>
       {{/if}}
       {{#if keywords.length}}
-      <ul class="keywords">
-        {{#each keywords}}<li>{{.}}</li>{{/each}}
-      </ul>
+      <p class="tech"><span class="tech-label">Tech:</span> {{#each keywords}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}</p>
       {{/if}}
     </article>
     {{/each}}

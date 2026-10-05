@@ -24,6 +24,8 @@ export default async (req, res) => {
       format: 'A4',
       printBackground: true,
       preferCSSPageSize: true,
+      tagged: true,
+      outline: true,
     });
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', 'attachment; filename="anmol-resume.pdf"');
