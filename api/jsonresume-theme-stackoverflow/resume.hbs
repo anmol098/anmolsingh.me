@@ -2,16 +2,16 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <style>
   {{{css}}}
   </style>
-  
   </head>
   <body>
-  
   <div id="resume">
     {{> basics }}
     {{> skills }}
@@ -24,6 +24,6 @@
     {{> languages }}
     {{> interests }}
     {{> references }}
-
+  </div>
   </body>
 </html>
