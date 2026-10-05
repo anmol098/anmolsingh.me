@@ -1,5 +1,5 @@
 ---
-date: '2024-01-01'
+date: '2025-05-15'
 title: 'Dume.ai'
 github: ''
 external: 'https://www.dume.ai/'
