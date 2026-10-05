@@ -10,10 +10,12 @@ tech:
   - Python
   - LLMs
   - AI Agents
-  - Vector DB
-  - WebSockets
+  - Voice AI
+  - WhatsApp API
+  - Chrome Extension
+  - Desktop App
 company: 'Founder'
 showInProjects: true
 ---
 
-My first entrepreneurial project: an AI executive assistant that connects tools like Gmail, Calendar, Notion, Jira, GitHub and Slack in a single chat-first interface. Dume summarizes updates, drafts follow-ups, manages meetings and reminders, and runs automations across your work stack, powered by top models from OpenAI, Gemini and more. It grew beyond the web app into a browser extension, WhatsApp, and a desktop app for local file work. I designed and built the product end to end, from the agentic backend to the UI. The product is live but winding down.
+My first entrepreneurial project: an AI executive assistant that connects 50+ tools like Gmail, Calendar, Notion, Jira and Slack, and carries out tasks from natural-language requests, powered by top models from OpenAI, Gemini and more. I built it end to end and shipped it on five surfaces: a web app, a Chrome extension, an AI agent on WhatsApp, an AI agent on phone calls, and Dume Cowork, a desktop app for macOS and Windows that handles local file work. The product is live but winding down.
